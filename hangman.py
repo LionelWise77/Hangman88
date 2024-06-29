@@ -1,22 +1,8 @@
 import random
 import string
-from google.oauth2.service_account import Credentials
-
 
 from words import words
 from diagram import lifes_visual_dictionary
-
-
-SCOPE = [
-    "https://www.googleapis.com/auth/spreadsheets",
-    "https://www.googleapis.com/auth/drive.file",
-    "https://www.googleapis.com/auth/drive"
-    ]
-
-CREDS = Credentials.from_service_account_file('creds.json')
-SCOPED_CREDS = CREDS.with_scopes(SCOPE)
-
-
 
 """
  We create a function to get a valid word. It selects a random choice from the list
@@ -96,5 +82,5 @@ def hangman():
     else:
         print(f'¡Excellent! You guessed the word {word}!')
 
-    if __name__ == '__main__':
+if __name__ == '__main__':
         hangman()
