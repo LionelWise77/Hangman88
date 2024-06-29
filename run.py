@@ -82,3 +82,15 @@ def hangman():
         else:
             # If the letter is not valid.
             print("\nThis letter is not valid.")
+
+
+    # The game reaches this line when the player's lives run out 
+    # or when all the letters of the word are guessed.
+    if lives == 0:
+        print(lifes_visual_dictionary[lives])
+        print(f"¡Hanged! You lost. I'm so sorry. The word was: {word}")
+    else:
+        print(f'¡Excellent! You guessed the word {word}!')
+
+    if __name__ == '__main__':
+        hangman()
